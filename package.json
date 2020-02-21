@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm install && react-scripts build",
+    "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "react-scripts test --env=node --coverage --watchAll=false"
   },
