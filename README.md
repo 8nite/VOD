@@ -5,6 +5,7 @@
 
 - Clone repo
 - navigate to repo folder and `yarn install`
+- `yarn build` to build prod deployment web files
 - `yarn start` and open http://localhost:3000 to view the website on local
 
 ## Important commands
