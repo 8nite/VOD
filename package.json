@@ -2,9 +2,6 @@
   "name": "vod",
   "version": "0.0.1",
   "private": true,
-  "devDependencies": {
-    "react-scripts": "^3.0.0"
-  },
   "dependencies": {
     "bootstrap": "^4.4.1",
     "prop-types": "^15.7.2",
@@ -13,6 +10,7 @@
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.2",
     "react-responsive-carousel": "^3.1.51",
+    "react-scripts": "^3.4.0",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
