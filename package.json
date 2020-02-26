@@ -21,8 +21,7 @@
     "start": "react-scripts start",
     "eject": "react-scripts eject",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=node --coverage --watchAll=false",
-    "dev": "set \"REACT_APP_NOT_SECRET_CODE=http://localhost:3010\" && npm start"
+    "test": "react-scripts test --env=node --coverage --watchAll=false"
   },
   "browserslist": [
     ">0.2%",
