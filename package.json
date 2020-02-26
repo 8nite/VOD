@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "eject": "react-scripts eject",
+    "build": "npm install",
     "test": "react-scripts test --env=node --coverage --watchAll=false"
   },
   "browserslist": [
