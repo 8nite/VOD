@@ -12,8 +12,8 @@ class Index extends React.Component {
     }
   }
 
-  componentWillMount() {
-    fetch('http://localhost:3010/?filter=' + this.props.filter)
+  componentDidMount() {
+    fetch(process.env.REACT_APP_NOT_SECRET_CODE + '/?filter=' + this.props.filter)
       .then(response => response.json())
       .then(entries => {
         this.setState(entries)

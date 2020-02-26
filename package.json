@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.4.1",
+    "dotenv": "^8.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.16",
@@ -19,8 +20,9 @@
   "scripts": {
     "start": "react-scripts start",
     "eject": "react-scripts eject",
-    "build": "npm install",
-    "test": "react-scripts test --env=node --coverage --watchAll=false"
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=node --coverage --watchAll=false",
+    "dev": "set \"REACT_APP_NOT_SECRET_CODE=http://localhost:3010\" && npm start"
   },
   "browserslist": [
     ">0.2%",
