@@ -1,7 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
 import configureStore from "./store";
-import { Provider, connect } from "react-redux";
 import { PersistGate } from "redux-persist/lib/integration/react";
 import Index from './components/Index'
 

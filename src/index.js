@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import Index from './index'
+import AppConnector from './AppConnector'
 
-ReactDOM.render(
-  <Index />,
-  document.getElementById('root')
-);
+window.addEventListener("load", init);
+
+export function init() {
+  ReactDOM.render(
+    <AppConnector />,
+    document.getElementById('root')
+  )
+}

@@ -1,7 +1,8 @@
 {
   "name": "vod",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
+  "main": "index.js",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "dotenv": "^8.2.0",

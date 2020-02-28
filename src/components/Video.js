@@ -32,10 +32,10 @@ class Video extends React.Component {
                 <video
                   id={entry.id}
                   key={entry.id}
-                  controls={false}
                   playsInline
                   light={entry.images[0].url}
                   playicon
+                  controls={'false'}
                   onEnded={this.props.onEnded}
                 >
                   <source src={entry.contents[0].url} />
