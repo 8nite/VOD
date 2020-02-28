@@ -32,7 +32,7 @@ function configureStore(initialState) {
   //const store = createStoreWithMiddleware(createStore)(reducer, initialState);
   const store = createStore(reducer, initialState);
   
-  console.log(store.getState())
+  //console.log(store.getState())
   // Enable persistence
   let persistor = persistStore(store, null, () => {
     store.getState() // if you want to get restoredState

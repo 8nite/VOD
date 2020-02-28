@@ -5,6 +5,8 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "npm-run-all": "^4.1.5",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.16",
@@ -18,15 +20,26 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node index",
+    "startdev": "react-scripts start",
     "eject": "react-scripts eject",
+    "builddev": "react-scripts build",
     "build": "npm install",
-    "test": "react-scripts test --env=node --coverage --watchAll=false"
+    "test": "react-scripts test --env=jsdom --coverage --watchAll=false",
+    "dev": "npm-run-all builddev startdev"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "react-router-dom": "^5.1.2",
+    "react-test-renderer": "^16.13.0",
+    "redux-mock-store": "^1.5.4",
+    "redux-test-utils": "^0.3.0"
+  }
 }

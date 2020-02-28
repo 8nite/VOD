@@ -5,7 +5,7 @@ import { Provider, connect } from "react-redux";
 import { PersistGate } from "redux-persist/lib/integration/react";
 import Index from './components/Index'
 
-// action creator
+// action creator for redux
 function changeFilter(text) {
   return {
     type: "CHANGEFILTER",
@@ -31,6 +31,7 @@ const { store, persistor } = configureStore({
 class App extends React.Component {
   onChangeFilter = e => {
     this.props.dispatch(changeFilter(e.nativeEvent.target.value));
+    //the images need to refresh
     window.location.reload(false);
   };
   onEnded = e => {

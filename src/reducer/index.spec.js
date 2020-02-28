@@ -31,6 +31,23 @@ describe('Update Watched List functions', () => {
             watched: [action.text]
         })
     })
+    it('add undefined state to watch?', () => {
+        const action = {
+            type: 'UPDATEWATCHED'
+        }
+        expect(reducer(undefined, action)).toEqual({
+            watched: [action.text]
+        })
+    })
+    it('add repeated watch?', () => {
+        const action = {
+            type: 'UPDATEWATCHED',
+            text: 'videoID'
+        }
+        expect(reducer({watched: ['videoID']}, action)).toEqual({
+            watched: [action.text]
+        })
+    })
     it('empty state?', () => {
         const action = {
             type: 'UPDATEWATCHED',
