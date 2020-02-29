@@ -6,84 +6,85 @@ class VideoList extends React.Component {
     if (this.props.entries) {
       return (
         <div className="container-fluid">
-          <div className="row">
-            {this.props.entries && this.props.filter && this.props.filter !== '' ? (
+          <div>
+            {this.props.filter && (this.props.filter !== '' && this.props.filter !== 'history') ? (
               <>
                 <div className="col align-self-start">
                   {this.props.filter}
                 </div>
-                <div className="col align-self-center">
+                <div>
                   <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === this.props.filter))} onEnded={this.props.onEnded} />
                 </div>
               </>
-            ) : (
-                <>
-                  <div className="row w-100">
-                    <div className="col align-self-start">
-                      movies-comedy
+            ) : this.props.filter !== 'history' ? (
+              <>
+                <div>
+                  <div className="col align-self-start">
+                    movies-comedy
                     </div>
-                    <div className="col align-self-center">
-                      <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-comedy'))} onEnded={this.props.onEnded} />
-                    </div>
+                  <div>
+                    <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-comedy'))} onEnded={this.props.onEnded} />
                   </div>
-                  <div className="row w-100">
-                    <div className="col align-self-start">
-                      movies-biography
+                </div>
+                <div>
+                  <div className="col align-self-start">
+                    movies-biography
                     </div>
-                    <div className="col align-self-center">
-                      <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-biography'))} onEnded={this.props.onEnded} />
-                    </div>
+                  <div>
+                    <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-biography'))} onEnded={this.props.onEnded} />
                   </div>
-                  <div className="row w-100">
-                    <div className="col align-self-start">
-                      movies-action
+                </div>
+                <div>
+                  <div className="col align-self-start">
+                    movies-action
                     </div>
-                    <div className="col align-self-center">
-                      <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-action'))} onEnded={this.props.onEnded} />
-                    </div>
+                  <div>
+                    <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-action'))} onEnded={this.props.onEnded} />
                   </div>
-                  <div className="row w-100">
-                    <div className="col align-self-start">
-                      movies-mystery
+                </div>
+                <div>
+                  <div className="col align-self-start">
+                    movies-mystery
                     </div>
-                    <div className="col align-self-center">
-                      <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-mystery'))} onEnded={this.props.onEnded} />
-                    </div>
+                  <div>
+                    <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-mystery'))} onEnded={this.props.onEnded} />
                   </div>
-                  <div className="row w-100">
-                    <div className="col align-self-start">
-                      movies-horror
+                </div>
+                <div>
+                  <div className="col align-self-start">
+                    movies-horror
                     </div>
-                    <div className="col align-self-center">
-                      <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-horror'))} onEnded={this.props.onEnded} />
-                    </div>
+                  <div>
+                    <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-horror'))} onEnded={this.props.onEnded} />
                   </div>
-                  <div className="row w-100">
-                    <div className="col align-self-start">
-                      movies-drama
+                </div>
+                <div>
+                  <div className="col align-self-start">
+                    movies-drama
                     </div>
-                    <div className="col align-self-center">
-                      <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-drama'))} onEnded={this.props.onEnded} />
-                    </div >
-                  </div>
-                  <div className="row w-100">
-                    <div className="col align-self-start">
-                      movies-crime
+                  <div>
+                    <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-drama'))} onEnded={this.props.onEnded} />
+                  </div >
+                </div>
+                <div>
+                  <div className="col align-self-start">
+                    movies-crime
                     </div>
-                    <div className="col align-self-center">
-                      <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-crime'))} onEnded={this.props.onEnded} />
-                    </div >
-                  </div>
-                </>
-              )}
+                  <div>
+                    <Video entries={this.props.entries.filter((entry) => entry.categories.some((category) => category.id === 'movies-crime'))} onEnded={this.props.onEnded} />
+                  </div >
+                </div>
+              </>
+            ) : (null)
+            }
           </div >
           {
             Array.isArray(this.props.watched) && this.props.watched.length > 0 && this.props.entries.some((entry) => this.props.watched.includes(entry.id)) ? (
-              <div className="row">
+              <div>
                 <div className="col align-self-start">
                   Watch Again
         </div>
-                <div className="col align-self-center">
+                <div>
                   <Video entries={this.props.entries.filter((entry) => this.props.watched.includes(entry.id))} onEnded={this.props.onEnded} />
                 </div>
               </div>

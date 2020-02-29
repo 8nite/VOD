@@ -24,26 +24,27 @@ class Video extends React.Component {
     if (this.props.entries && this.props.entries.every((entry) => { return entry.id && entry.images && entry.contents && entry.title && entry.images[0] && entry.images[0].url && entry.contents[0] && entry.contents[0].url })) {
       return (
         //Carousel containe list of videos
-        <Carousel useKeyboardArrows={true}>
+        <Carousel className="align-self-start" dynamicHeight={false} centerMode centerSlidePercentage={15} emulateTouch useKeyboardArrows={true} showArrows={false} showThumbs={false} showStatus={false} showIndicators={false}>
           {this.props.entries.map((entry) =>
-            <div style={{ "height": "717px" }} key={entry.id}>
+            <div className="container" key={entry.id}>
               <img src={entry.images[0].url} alt={entry.title} />
-              <p className="legend">
+              <div className="legend">
                 <video
+                  width={230}
                   id={entry.id}
                   key={entry.id}
                   playsInline
                   light={entry.images[0].url}
-                  playicon
-                  controls={'false'}
+                  playicon={'true'}
+                  controls={false}
                   onEnded={this.props.onEnded}
                 >
                   <source src={entry.contents[0].url} />
                 </video>
-                <p><a href={entry.contents[0].url}>{entry.title}</a></p>
+                <p>{entry.title}</p>
                 <Button variant="primary" onClick={this.showModal}>
                   More info
-              </Button>
+                </Button>
 
                 <Modal show={this.state.show} onHide={this.hideModal}>
                   <Modal.Header closeButton>
@@ -60,9 +61,10 @@ class Video extends React.Component {
                 </Button>
                   </Modal.Footer>
                 </Modal>
-              </p>
+              </div>
             </div>
           )}
+          <div />
         </Carousel>
       )
     }

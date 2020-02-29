@@ -5,10 +5,10 @@ import PropTypes from 'prop-types'
 const Header = ({ changeFilter }) => (
   <header>
     <Navbar expand="lg" variant="dark" bg="dark">
-      <Navbar.Brand href="#home">One Page Video Web App</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+      <Navbar.Brand className="mr-auto" href="#home">One Page Video Web App</Navbar.Brand>
+      <Navbar.Toggle className="mr-auto" aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse className="mr-auto" id="basic-navbar-nav">
+        <Nav>
           <Nav.Link><Button onClick={changeFilter} variant="secondary" value=''>ALL</Button></Nav.Link>
           <Nav.Link><Button onClick={changeFilter} variant="primary" value='movies-comedy'>Comedy</Button></Nav.Link>
           <Nav.Link><Button onClick={changeFilter} variant="secondary" value='movies-biography'>Biography</Button></Nav.Link>
@@ -19,6 +19,7 @@ const Header = ({ changeFilter }) => (
           <Nav.Link><Button onClick={changeFilter} variant="info" value='movies-crime'>Crime</Button></Nav.Link>
         </Nav>
       </Navbar.Collapse>
+      <Navbar className="ml-auto"><Button onClick={changeFilter} variant="secondary" value='history'>History</Button></Navbar>
     </Navbar>
   </header>
 )

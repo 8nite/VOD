@@ -15,6 +15,6 @@ describe('Header Page', () => {
     
     it('Showing right template', () => {
         const HeaderLayout = shallow(testHeader(changeFilter));
-        expect(HeaderLayout.find('Button').map((node) => node.text())).toHaveLength(8)
+        expect(HeaderLayout.find('Button').map((node) => node.text())).toHaveLength(9)
     })
 })
