@@ -20,7 +20,7 @@
     "redux-persist": "^6.0.0"
   },
   "scripts": {
-    "start": "node index",
+    "start": "react-scripts start",
     "startdev": "react-scripts start",
     "eject": "react-scripts eject",
     "builddev": "react-scripts build",
