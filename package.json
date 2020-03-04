@@ -20,11 +20,11 @@
     "redux-persist": "^6.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node index",
     "startdev": "react-scripts start",
     "eject": "react-scripts eject",
     "builddev": "react-scripts build",
-    "build": "npm install",
+    "build": "react-scripts --max-old-space-size=500 build",
     "test": "react-scripts test --env=jsdom --coverage --watchAll=false",
     "dev": "npm-run-all builddev startdev"
   },
